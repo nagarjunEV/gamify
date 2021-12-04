@@ -16,7 +16,7 @@
           "raw": "{\n    \"email\": \"test@test.com\",\n    \"password\": \"password\"\n}",
           "options": { "raw": { "language": "json" } }
         },
-        "url": "localhost:3000/api/auth/login"
+        "url": "localhost:4000/api/auth/login"
       },
       "response": [
         {
@@ -96,7 +96,7 @@
           "raw": "{\n    \"firstName\": \"first\",\n    \"lastName\": \"last\",\n    \"email\": \"test@test.com\",\n    \"password\": \"password\"\n}",
           "options": { "raw": { "language": "json" } }
         },
-        "url": "localhost:3000/api/auth/register"
+        "url": "localhost:4000/api/auth/register"
       },
       "response": [
         {
@@ -162,6 +162,50 @@
           ],
           "cookie": [],
           "body": "{\n    \"status\": 0,\n    \"message\": \"Validation Error.\",\n    \"data\": [\n        {\n            \"value\": \"test@test.com\",\n            \"msg\": \"E-mail already in use\",\n            \"param\": \"email\",\n            \"location\": \"body\"\n        }\n    ]\n}"
+        }
+      ]
+    },
+    {
+      "name": "Location",
+      "id": "7baab6c3-cbf8-455c-93c3-066b2f567256",
+      "request": {
+        "auth": {
+          "type": "bearer",
+          "bearer": {
+            "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MWFiODVlNmIyMTBkMTM0YmQwNTE0MWEiLCJmaXJzdE5hbWUiOiJmaXJzdCIsImxhc3ROYW1lIjoibGFzdCIsImVtYWlsIjoidGVzdEB0ZXN0LmNvbSIsImlhdCI6MTYzODYzMDg5MCwiZXhwIjoxNjM4NjM4MDkwfQ.4JdkAUYfBWBrXSzRDsCVpdxiO_bkpE9-zezm2v5SqcA"
+          }
+        },
+        "method": "GET",
+        "header": [],
+        "url": "localhost:4000/api/location"
+      },
+      "response": [
+        {
+          "id": "8a7ddd84-1139-4179-875e-96e521f3eb14",
+          "name": "List Location",
+          "originalRequest": {
+            "method": "GET",
+            "header": [],
+            "url": "localhost:4000/api/location"
+          },
+          "status": "OK",
+          "code": 200,
+          "_postman_previewlanguage": "json",
+          "header": [
+            { "key": "X-Powered-By", "value": "Express" },
+            { "key": "Access-Control-Allow-Origin", "value": "*" },
+            {
+              "key": "Content-Type",
+              "value": "application/json; charset=utf-8"
+            },
+            { "key": "Content-Length", "value": "66" },
+            { "key": "ETag", "value": "W/\"42-YstusZONiRSdOVhtAW6DiLAVsCc\"" },
+            { "key": "Date", "value": "Sat, 04 Dec 2021 15:15:04 GMT" },
+            { "key": "Connection", "value": "keep-alive" },
+            { "key": "Keep-Alive", "value": "timeout=5" }
+          ],
+          "cookie": [],
+          "body": "{\n    \"status\": 1,\n    \"message\": \"Operation success\",\n    \"data\": {\n        \"locations\": []\n    }\n}"
         }
       ]
     }
