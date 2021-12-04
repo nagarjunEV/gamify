@@ -2,16 +2,16 @@
 
 ### Using Git (recommended)
 
-1.  Clone the project from github. Change "myproject" to your project name.
+1.  Clone the repo.
 
 ```bash
-git clone https://github.com/maitraysuthar/rest-api-nodejs-mongodb.git ./myproject
+git clone https://github.com/nagarjunEV/gamify.git
 ```
 
 ### Install npm dependencies after installing (Git or manual download)
 
 ```bash
-cd myproject
+cd gamify/backend or cd gamify/frontend
 npm install
 ```
 
@@ -34,30 +34,20 @@ npm install
 ├── bin
 │   └── www
 ├── controllers
-│   ├── AuthController.js
-│   └── BookController.js
+│   └── AuthController.js
 ├── models
-│   ├── BookModel.js
 │   └── UserModel.js
 ├── routes
 │   ├── api.js
 │   ├── auth.js
-│   └── book.js
 ├── middlewares
 │   ├── jwt.js
 ├── helpers
 │   ├── apiResponse.js
-│   ├── constants.js
-│   ├── mailer.js
-│   └── utility.js
-├── test
-│   ├── testConfig.js
-│   ├── auth.js
-│   └── book.js
-└── public
-    ├── index.html
-    └── stylesheets
-        └── style.css
+└── test
+    ├── testConfig.js
+    ├── auth.js
+
 ```
 
 ## How to run
