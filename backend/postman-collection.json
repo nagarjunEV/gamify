@@ -1,0 +1,169 @@
+{
+  "info": {
+    "_postman_id": "dc8dd96e-cebd-4e38-b10f-bc82e2aa3363",
+    "name": "Gamify",
+    "schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
+  },
+  "item": [
+    {
+      "name": "Login",
+      "id": "6f1b8481-b248-4ce0-9354-1cda4fa3ae5e",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n    \"email\": \"test@test.com\",\n    \"password\": \"password\"\n}",
+          "options": { "raw": { "language": "json" } }
+        },
+        "url": "localhost:3000/api/auth/login"
+      },
+      "response": [
+        {
+          "id": "74c1a965-f51a-4785-a36f-51ec2906dfd1",
+          "name": "Success",
+          "originalRequest": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n    \"email\": \"test@test.com\",\n    \"password\": \"password\"\n}",
+              "options": { "raw": { "language": "json" } }
+            },
+            "url": "localhost:3000/api/auth/login"
+          },
+          "status": "OK",
+          "code": 200,
+          "_postman_previewlanguage": "json",
+          "header": [
+            { "key": "X-Powered-By", "value": "Express" },
+            { "key": "Access-Control-Allow-Origin", "value": "*" },
+            {
+              "key": "Content-Type",
+              "value": "application/json; charset=utf-8"
+            },
+            { "key": "Content-Length", "value": "409" },
+            { "key": "ETag", "value": "W/\"199-OG/tVYoT6xnU6Spiuyx7u3mE+p4\"" },
+            { "key": "Date", "value": "Sat, 04 Dec 2021 12:42:15 GMT" },
+            { "key": "Connection", "value": "keep-alive" },
+            { "key": "Keep-Alive", "value": "timeout=5" }
+          ],
+          "cookie": [],
+          "body": "{\n    \"status\": 1,\n    \"message\": \"Login Success.\",\n    \"data\": {\n        \"_id\": \"61ab61c4bfe9c42c389a8504\",\n        \"firstName\": \"first\",\n        \"lastName\": \"last\",\n        \"email\": \"test@test.com\",\n        \"token\": \"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MWFiNjFjNGJmZTljNDJjMzg5YTg1MDQiLCJmaXJzdE5hbWUiOiJmaXJzdCIsImxhc3ROYW1lIjoibGFzdCIsImVtYWlsIjoidGVzdEB0ZXN0LmNvbSIsImlhdCI6MTYzODYyMTczNSwiZXhwIjoxNjM4NjI4OTM1fQ.JUKpIHE3ptG6Y7qri-LLF7b75bYwl2_4XMoZrNXDlLY\"\n    }\n}"
+        },
+        {
+          "id": "341c0517-7732-4f4b-8e07-b8dc11ac1d31",
+          "name": "Login Error",
+          "originalRequest": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n    \"email\": \"test@test.com\",\n    \"password\": \"password1\"\n}",
+              "options": { "raw": { "language": "json" } }
+            },
+            "url": "localhost:3000/api/auth/login"
+          },
+          "status": "Unauthorized",
+          "code": 401,
+          "_postman_previewlanguage": "json",
+          "header": [
+            { "key": "X-Powered-By", "value": "Express" },
+            { "key": "Access-Control-Allow-Origin", "value": "*" },
+            {
+              "key": "Content-Type",
+              "value": "application/json; charset=utf-8"
+            },
+            { "key": "Content-Length", "value": "49" },
+            { "key": "ETag", "value": "W/\"31-KJJScn3MoxU8BwfgzJfV195Xcv4\"" },
+            { "key": "Date", "value": "Sat, 04 Dec 2021 12:43:43 GMT" },
+            { "key": "Connection", "value": "keep-alive" },
+            { "key": "Keep-Alive", "value": "timeout=5" }
+          ],
+          "cookie": [],
+          "body": "{\n    \"status\": 0,\n    \"message\": \"Email or Password wrong.\"\n}"
+        }
+      ]
+    },
+    {
+      "name": "Register",
+      "id": "b5a63805-80d7-4c3a-bd71-6be338cdc876",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n    \"firstName\": \"first\",\n    \"lastName\": \"last\",\n    \"email\": \"test@test.com\",\n    \"password\": \"password\"\n}",
+          "options": { "raw": { "language": "json" } }
+        },
+        "url": "localhost:3000/api/auth/register"
+      },
+      "response": [
+        {
+          "id": "22c6acab-b1c9-4dab-a033-cc9ec195e6cf",
+          "name": "Success",
+          "originalRequest": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n    \"firstName\": \"first\",\n    \"lastName\": \"last\",\n    \"email\": \"test@test.com\",\n    \"password\": \"password\"\n}",
+              "options": { "raw": { "language": "json" } }
+            },
+            "url": "localhost:3000/api/auth/register"
+          },
+          "status": "OK",
+          "code": 200,
+          "_postman_previewlanguage": "json",
+          "header": [
+            { "key": "X-Powered-By", "value": "Express" },
+            { "key": "Access-Control-Allow-Origin", "value": "*" },
+            {
+              "key": "Content-Type",
+              "value": "application/json; charset=utf-8"
+            },
+            { "key": "Content-Length", "value": "150" },
+            { "key": "ETag", "value": "W/\"96-EEtfcqPh1UpnZSrn+gSVeZrKo48\"" },
+            { "key": "Date", "value": "Sat, 04 Dec 2021 12:40:36 GMT" },
+            { "key": "Connection", "value": "keep-alive" },
+            { "key": "Keep-Alive", "value": "timeout=5" }
+          ],
+          "cookie": [],
+          "body": "{\n    \"status\": 1,\n    \"message\": \"Registration Success.\",\n    \"data\": {\n        \"_id\": \"61ab61c4bfe9c42c389a8504\",\n        \"firstName\": \"first\",\n        \"lastName\": \"last\",\n        \"email\": \"test@test.com\"\n    }\n}"
+        },
+        {
+          "id": "0756bc4f-b90c-4088-8dac-da3a8ec884e1",
+          "name": "Register Error",
+          "originalRequest": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n    \"firstName\": \"first\",\n    \"lastName\": \"last\",\n    \"email\": \"test@test.com\",\n    \"password\": \"password\"\n}",
+              "options": { "raw": { "language": "json" } }
+            },
+            "url": "localhost:3000/api/auth/register"
+          },
+          "status": "Bad Request",
+          "code": 400,
+          "_postman_previewlanguage": "json",
+          "header": [
+            { "key": "X-Powered-By", "value": "Express" },
+            { "key": "Access-Control-Allow-Origin", "value": "*" },
+            {
+              "key": "Content-Type",
+              "value": "application/json; charset=utf-8"
+            },
+            { "key": "Content-Length", "value": "141" },
+            { "key": "ETag", "value": "W/\"8d-6HCRsjXjSui2Btn8qdDL8mcQ5wQ\"" },
+            { "key": "Date", "value": "Sat, 04 Dec 2021 12:41:19 GMT" },
+            { "key": "Connection", "value": "keep-alive" },
+            { "key": "Keep-Alive", "value": "timeout=5" }
+          ],
+          "cookie": [],
+          "body": "{\n    \"status\": 0,\n    \"message\": \"Validation Error.\",\n    \"data\": [\n        {\n            \"value\": \"test@test.com\",\n            \"msg\": \"E-mail already in use\",\n            \"param\": \"email\",\n            \"location\": \"body\"\n        }\n    ]\n}"
+        }
+      ]
+    }
+  ]
+}
